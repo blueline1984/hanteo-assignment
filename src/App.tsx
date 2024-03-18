@@ -1,10 +1,12 @@
 import { Route, Routes } from "react-router-dom";
 import NavBar from "./components/NavBar";
+import Banner from "./components/Banner";
 
 function App() {
   return (
     <>
       <NavBar />
+      <Banner />
       <Routes>
         <Route path="/" />
         <Route path="/chart" />
