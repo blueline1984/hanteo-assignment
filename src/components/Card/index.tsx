@@ -1,5 +1,4 @@
 import * as S from "./index.styled";
-import { Link } from "react-router-dom";
 import { Banner } from "../../interface/index.interface";
 
 interface ICard {
@@ -9,7 +8,9 @@ interface ICard {
 const Card = ({ cardItem }: ICard) => {
   return (
     <S.Container>
-      <S.CardImg src={cardItem.imgUrl} />
+      <S.ImgContainer>
+        <S.CardImg src={cardItem.imgUrl} />
+      </S.ImgContainer>
       <S.CardContent>
         <S.Box>
           <S.MainText>{cardItem.mainText}</S.MainText>
