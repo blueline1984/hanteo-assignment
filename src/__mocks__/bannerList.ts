@@ -12,14 +12,14 @@ export const BannerList: Banner[] = [
   },
   {
     id: 1,
-    imgUrl: "/src/assets/banner_1.png",
+    imgUrl: "/src/assets/banner_2.png",
     mainText:
       "[M COUNTDOWN]10월 2주차 어쩌고 저쩌고 블라블라블라블라블라블라블라블라",
     subText: "2024.01.01 ~ 2024.01.01 17:00 (KST)",
   },
   {
     id: 2,
-    imgUrl: "/src/assets/banner_1.png",
+    imgUrl: "/src/assets/banner_3.png",
     mainText:
       "[M COUNTDOWN]10월 2주차 어쩌고 저쩌고 블라블라블라블라블라블라블라블라",
     subText: "2024.01.01 ~ 2024.01.01 17:00 (KST)",
