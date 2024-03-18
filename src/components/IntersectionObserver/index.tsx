@@ -6,7 +6,7 @@ interface InfiniteScrollProps {
 }
 
 const IntersectionObserver = ({ fetchMoreData }: InfiniteScrollProps) => {
-  const [pageNumber, setPageNumber] = useState(1);
+  const [pageNumber] = useState(1);
   const [ref, inView] = useInView();
 
   useEffect(() => {

@@ -5,7 +5,6 @@ import IntersectionObserver from "../IntersectionObserver";
 import axios from "axios";
 import { API_KEY } from "../../constants/apiKey";
 import { DataList } from "../../models";
-import { contentList } from "../../__mocks__/contentList";
 
 const ContentList = () => {
   const { pathname } = useLocation();

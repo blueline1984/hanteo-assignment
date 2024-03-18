@@ -10,6 +10,7 @@ const NavBar = () => {
   const navigate = useNavigate();
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+    console.log(event);
     setValue(newValue);
     navigate(`${TAB_LIST[newValue].value}`);
   };
