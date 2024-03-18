@@ -1,8 +1,9 @@
 import * as S from "./index.styled";
-import { ICardItem } from "../../interface/index.interface";
+import { Link } from "react-router-dom";
+import { Banner } from "../../interface/index.interface";
 
 interface ICard {
-  cardItem: ICardItem;
+  cardItem: Banner;
 }
 
 const Card = ({ cardItem }: ICard) => {
@@ -12,7 +13,11 @@ const Card = ({ cardItem }: ICard) => {
       <S.CardContent>
         <S.Box>
           <S.MainText>{cardItem.mainText}</S.MainText>
-          {cardItem.buttonText && <S.Button>{cardItem.buttonText}</S.Button>}
+          {cardItem.buttonText && (
+            <S.Button href={cardItem.url} target="_blank">
+              {cardItem.buttonText}
+            </S.Button>
+          )}
         </S.Box>
         <S.SubText>{cardItem.subText}</S.SubText>
       </S.CardContent>

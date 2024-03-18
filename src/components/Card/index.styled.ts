@@ -31,7 +31,9 @@ export const MainText = styled.p`
   white-space: nowrap;
 `;
 
-export const Button = styled.button`
+export const Button = styled.a`
+  text-decoration: none;
+  text-align: center;
   font-size: 12px;
   width: 25%;
   background-color: #fff;
