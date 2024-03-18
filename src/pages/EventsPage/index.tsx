@@ -1,12 +1,7 @@
-import React from "react";
-import ContentList from "../../components/CotentList";
+import { Page } from "../../models";
 
-const EventPage = () => {
-  return (
-    <>
-      <ContentList></ContentList>
-    </>
-  );
+const EventPage = ({ children }: Page) => {
+  return <>{children}</>;
 };
 
 export default EventPage;

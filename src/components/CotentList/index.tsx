@@ -1,10 +1,13 @@
 import * as S from "./index.styled";
 import { contentList } from "../../__mocks__/contentList";
+import { useLocation } from "react-router-dom";
 
 const ContentList = () => {
+  const { pathname } = useLocation();
+
   return (
     <S.Container>
-      <S.Title>{"Content Title"}</S.Title>
+      <S.Title>{`${pathname.split("/")[1]}`}</S.Title>
       {contentList.map((content, index) => (
         <S.List key={`${content.mbid + index}`}>
           <S.Left>

@@ -1,12 +1,7 @@
-import React from "react";
-import ContentList from "../../components/CotentList";
+import { Page } from "../../models";
 
-const RechargePage = () => {
-  return (
-    <>
-      <ContentList></ContentList>
-    </>
-  );
+const RechargePage = ({ children }: Page) => {
+  return <>{children}</>;
 };
 
 export default RechargePage;

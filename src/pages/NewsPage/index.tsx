@@ -1,12 +1,7 @@
-import React from "react";
-import ContentList from "../../components/CotentList";
+import { Page } from "../../models";
 
-const NewsPage = () => {
-  return (
-    <>
-      <ContentList></ContentList>
-    </>
-  );
+const NewsPage = ({ children }: Page) => {
+  return <>{children}</>;
 };
 
 export default NewsPage;

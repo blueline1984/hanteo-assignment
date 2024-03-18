@@ -1,4 +1,4 @@
-import { Banner } from "../interface/index.interface";
+import { Banner } from "../models";
 
 export const BannerList: Banner[] = [
   {

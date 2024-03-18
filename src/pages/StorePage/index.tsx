@@ -1,12 +1,8 @@
 import React from "react";
-import ContentList from "../../components/CotentList";
+import { Page } from "../../models";
 
-const StorePage = () => {
-  return (
-    <>
-      <ContentList></ContentList>
-    </>
-  );
+const StorePage = ({ children }: Page) => {
+  return <>{children}</>;
 };
 
 export default StorePage;

@@ -1,16 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
+import { TAB_LIST } from "../../constants/tabList";
+import { useNavigate } from "react-router-dom";
 
 const NavBar = () => {
-  const [value, setValue] = React.useState(0);
-  console.log(value);
+  const [value, setValue] = useState(0);
+  const navigate = useNavigate();
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
-    console.log(event);
+    navigate(`${TAB_LIST[newValue].value}`);
   };
+
   return (
     <Box sx={{ width: "100%" }}>
       <Tabs
@@ -20,12 +23,9 @@ const NavBar = () => {
         scrollButtons="auto"
         aria-label="scrollable auto tabs example"
       >
-        <Tab label="차트" />
-        <Tab label="Whook" />
-        <Tab label="이벤트" />
-        <Tab label="뉴스" />
-        <Tab label="스토어" />
-        <Tab label="충전소" />
+        {TAB_LIST.map((tab) => (
+          <Tab key={tab.label} label={tab.label} />
+        ))}
       </Tabs>
     </Box>
   );
