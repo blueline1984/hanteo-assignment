@@ -6,3 +6,7 @@ export interface Banner {
   buttonText?: string;
   url?: string;
 }
+
+export interface Page {
+  children: React.ReactNode;
+}

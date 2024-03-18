@@ -1,12 +1,14 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import Banner from "./components/Banner";
 import { useState, useEffect } from "react";
 import ChartPage from "./pages/ChartPage";
+import WhookPage from "./pages/WhookPage";
 import EventsPage from "./pages/EventsPage";
 import NewsPage from "./pages/NewsPage";
 import StorePage from "./pages/StorePage";
 import RechargePage from "./pages/RechargePage";
+import ContentList from "./components/CotentList";
 
 function App() {
   // const [data, setData] = useState();
@@ -28,12 +30,28 @@ function App() {
       <NavBar />
       <Banner />
       <Routes>
-        <Route path="/" />
-        <Route path="/chart" element={<ChartPage />} />
-        <Route path="/events" element={<EventsPage />} />
-        <Route path="/news" element={<NewsPage />} />
-        <Route path="/store" element={<StorePage />} />
-        <Route path="/recharge" element={<RechargePage />} />
+        <Route
+          path="/chart"
+          element={<ChartPage>{<ContentList />}</ChartPage>}
+        />
+        <Route
+          path="/whook"
+          element={<WhookPage>{<ContentList />}</WhookPage>}
+        />
+        <Route
+          path="/events"
+          element={<EventsPage>{<ContentList />}</EventsPage>}
+        />
+        <Route path="/news" element={<NewsPage>{<ContentList />}</NewsPage>} />
+        <Route
+          path="/store"
+          element={<StorePage>{<ContentList />}</StorePage>}
+        />
+        <Route
+          path="/recharge"
+          element={<RechargePage>{<ContentList />}</RechargePage>}
+        />
+        <Route path="*" element={<Navigate to="/chart" replace={true} />} />
       </Routes>
     </>
   );

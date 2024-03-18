@@ -1,5 +1,5 @@
 import * as S from "./index.styled";
-import { Banner } from "../../interface/index.interface";
+import { Banner } from "../../models";
 
 interface ICard {
   cardItem: Banner;

@@ -1,12 +1,7 @@
-import React from "react";
-import ContentList from "../../components/CotentList";
+import { Page } from "../../models";
 
-const ChartPage = () => {
-  return (
-    <>
-      <ContentList></ContentList>
-    </>
-  );
+const ChartPage = ({ children }: Page) => {
+  return <>{children}</>;
 };
 
 export default ChartPage;
