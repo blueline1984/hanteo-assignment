@@ -10,3 +10,18 @@ export interface Banner {
 export interface Page {
   children: React.ReactNode;
 }
+
+export interface DataList {
+  image: Image[];
+  listeners: string;
+  mbid: string;
+  name: string;
+  playcount: string;
+  streamable: string;
+  url: string;
+}
+
+interface Image {
+  size: string;
+  text: string;
+}

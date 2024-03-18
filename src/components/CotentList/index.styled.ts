@@ -56,13 +56,13 @@ export const ImgContainer = styled.div`
 `;
 
 export const Img = styled.img`
-  /* padding-right: 10px; */
   object-fit: cover;
   width: 100%;
   height: 100%;
 `;
 
 export const Top = styled.div``;
+
 export const Bottom = styled.div`
   padding-top: 10px;
   font-size: 14px;

@@ -1,4 +1,6 @@
-export const contentList = [
+import { DataList } from "../models";
+
+export const contentList: DataList[] = [
   {
     image: [
       {
